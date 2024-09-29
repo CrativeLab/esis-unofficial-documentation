@@ -36,22 +36,3 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
-  library-deployment:
-    needs: [page-deployment]
-    runs-on: ubuntu-latest
-    strategy:
-      matrix:
-        repo:
-          - 'solvedac/api.ts'
-          - 'solvedac/api.rs'
-    steps:
-      - name: Invoke Workflow
-        uses: benc-uk/workflow-dispatch@v1
-        with:
-          workflow: Follow Up
-          token: ${{ secrets.WORKFLOW_DISPATCH }}
-          repo: ${{ matrix.repo }}
-          inputs: |
-            {
-              "run-id": "${{ github.run_id }}"
-            }
