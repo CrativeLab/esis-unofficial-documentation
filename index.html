@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="mn">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ESIS Unofficial documentation</title>
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/@stoplight/elements/styles.min.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css"
+    />
+    <script src="https://unpkg.com/@stoplight/elements/web-components.min.js"></script>
+    <style>
+      :root {
+        --font-prose: Pretendard, -apple-system, BlinkMacSystemFont, system-ui,
+          Roboto, 'Helvetica Neue', 'Segoe UI', 'Apple SD Gothic Neo',
+          sans-serif;
+        --font-ui: Pretendard, -apple-system, BlinkMacSystemFont, system-ui,
+          Roboto, 'Helvetica Neue', 'Segoe UI', 'Apple SD Gothic Neo',
+          sans-serif;
+      }
+      #elements {
+        display: block;
+        height: 100vh;
+      }
+    </style>
+  </head>
+  <body>
+    <elements-api
+      id="elements"
+      apiDescriptionUrl="/unofficial-documentation/tsp-output/@typespec/openapi3/openapi.yaml"
+      router="hash"
+      tryItCredentialsPolicy="include"
+      layout="responsive"
+      hideInternal="true"
+    />
+  </body>
+</html>
